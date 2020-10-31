@@ -9,12 +9,21 @@
 import UIKit
 import Foundation
 
+protocol CalculadoraViewProtocol: class {
+    
+    func sucessCalcIMC (value: String)
+}
+
 class CalculadoraView: UIView {
     
     @IBOutlet weak var pesoTextField: UITextField!
     @IBOutlet weak var alturaTextField: UITextField!
     @IBOutlet weak var testeTextField: UITextField!
 
+    
+    weak var delegate: CalculadoraViewProtocol?
+    
+    
     
     func setupView(color: UIColor) {
         self.alturaTextField.placeholder = "Altura"
