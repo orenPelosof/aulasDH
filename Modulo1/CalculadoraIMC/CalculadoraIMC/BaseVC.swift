@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  BaseVC.swift
 //  CalculadoraIMC
 //
 //  Created by Oren Pelosof on 27/10/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
