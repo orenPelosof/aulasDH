@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CalculadoraVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculadoraVC" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLF-aD-V0c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDn-lj-xA9" customClass="CalculadoraView" customModule="CalculadoraIMC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-c1-KlV">
+                                                <rect key="frame" x="20" y="55" width="374" height="90"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Altura" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mlh-Dl-Rga">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="alturaTextfield:" destination="lmy-aa-Z8I" eventType="editingDidEnd" id="Ocb-54-frU"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Peso" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhJ-r7-Ke3">
+                                                        <rect key="frame" x="0.0" y="56" width="374" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="XGK-c1-KlV" secondAttribute="trailing" constant="20" id="4na-aQ-oEJ"/>
+                                            <constraint firstItem="XGK-c1-KlV" firstAttribute="centerY" secondItem="UDn-lj-xA9" secondAttribute="centerY" id="7V0-qB-Kxg"/>
+                                            <constraint firstAttribute="height" constant="200" id="NpM-ff-GEr"/>
+                                            <constraint firstItem="XGK-c1-KlV" firstAttribute="leading" secondItem="UDn-lj-xA9" secondAttribute="leading" constant="20" id="bTg-v4-VtH"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="alturaTextField" destination="mlh-Dl-Rga" id="hlo-td-Lm9"/>
+                                            <outlet property="pesoTextField" destination="hhJ-r7-Ke3" id="q3j-cu-k1M"/>
+                                        </connections>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi0-YN-xcd">
+                                        <rect key="frame" x="18" y="306" width="378" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="aol-z8-Q8x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="23"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxh-tk-6h2">
+                                        <rect key="frame" x="18" y="376" width="378" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="21"/>
+                                        <state key="normal" title="Calcular">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clicouCalcularButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKg-3t-ctk"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULTADO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HJ-Ub-zY4">
+                                        <rect key="frame" x="18" y="270" width="378" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="MfP-4z-lMq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.51163218922739728" blue="0.53996325624520547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0HJ-Ub-zY4" firstAttribute="top" secondItem="UDn-lj-xA9" secondAttribute="bottom" constant="20" id="3eZ-7C-5MN"/>
+                                    <constraint firstItem="UDn-lj-xA9" firstAttribute="leading" secondItem="aLF-aD-V0c" secondAttribute="leading" id="7iB-o9-P0o"/>
+                                    <constraint firstItem="0HJ-Ub-zY4" firstAttribute="leading" secondItem="aLF-aD-V0c" secondAttribute="leading" constant="18" id="JfD-G3-Mef"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qxh-tk-6h2" secondAttribute="trailing" constant="18" id="KSN-zb-1x9"/>
+                                    <constraint firstItem="UDn-lj-xA9" firstAttribute="top" secondItem="aLF-aD-V0c" secondAttribute="top" constant="50" id="M48-y7-doz"/>
+                                    <constraint firstItem="xi0-YN-xcd" firstAttribute="top" secondItem="0HJ-Ub-zY4" secondAttribute="bottom" constant="15" id="OuB-1u-Kvd"/>
+                                    <constraint firstAttribute="trailing" secondItem="xi0-YN-xcd" secondAttribute="trailing" constant="18" id="dCl-NM-xat"/>
+                                    <constraint firstItem="xi0-YN-xcd" firstAttribute="leading" secondItem="aLF-aD-V0c" secondAttribute="leading" constant="18" id="hAr-Oc-Dve"/>
+                                    <constraint firstAttribute="trailing" secondItem="UDn-lj-xA9" secondAttribute="trailing" id="i9Z-cX-yzU"/>
+                                    <constraint firstItem="Qxh-tk-6h2" firstAttribute="leading" secondItem="aLF-aD-V0c" secondAttribute="leading" constant="18" id="vjO-dE-jT0"/>
+                                    <constraint firstAttribute="trailing" secondItem="0HJ-Ub-zY4" secondAttribute="trailing" constant="18" id="yDM-x2-4At"/>
+                                    <constraint firstItem="Qxh-tk-6h2" firstAttribute="top" secondItem="xi0-YN-xcd" secondAttribute="bottom" constant="25" id="yL5-88-vPV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aLF-aD-V0c" secondAttribute="trailing" id="5mi-tb-Qdf"/>
+                            <constraint firstItem="aLF-aD-V0c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7UK-Mf-qdH"/>
+                            <constraint firstItem="aLF-aD-V0c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A4g-4y-nhV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aLF-aD-V0c" secondAttribute="bottom" id="Hzq-hX-1Xd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="calcButton" destination="Qxh-tk-6h2" id="VIz-bY-MGg"/>
+                        <outlet property="calcView" destination="UDn-lj-xA9" id="7TE-OM-Qdq"/>
+                        <outlet property="containerView" destination="aLF-aD-V0c" id="3Go-hz-VUk"/>
+                        <outlet property="resultadoLabel" destination="xi0-YN-xcd" id="c3I-7I-s6C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="lmy-aa-Z8I" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="125"/>
+        </scene>
+    </scenes>
+</document>
